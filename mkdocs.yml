@@ -1,1 +1,7 @@
+site_name: mkdocs-portfolio-2025
+theme:
+  name: material
+
+nav:
+  - ようこそ: index.md
 site_name: My Docs
