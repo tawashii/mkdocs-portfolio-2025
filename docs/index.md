@@ -180,13 +180,6 @@ export PATH=$PATH:/Users/yourname/Library/Python/3.9/bin
 
 ---
 
-### ❗ ホームディレクトリで `git init` してしまう
-
-ホームで実行すると全ファイルをGitが追跡してしまいます。  
-`.git` を削除し、適切なプロジェクトフォルダでやり直しました。
-
----
-
 ### ❗ GitHub Actions が `exit code 128`
 
 `gh-pages` ブランチが存在していなかったため、  
