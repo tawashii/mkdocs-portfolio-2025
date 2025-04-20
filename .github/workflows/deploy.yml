@@ -8,18 +8,25 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.11
-      - run: pip install mkdocs mkdocs-material
-      - run: mkdocs build
-      - uses: peaceiris/actions-gh-pages@v3
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install mkdocs mkdocs-material
+
+      - name: Build MkDocs site
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-	　publish_dir: ./site
+          publish_dir: ./site
           user_name: github-actions
           user_email: github-actions@github.com
-
 
